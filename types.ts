@@ -6,6 +6,7 @@ export interface Project {
   description: string;
   imageUrl: string;
   highlights: string[];
+  liveUrl?: string;
 }
 
 export interface PipelineStep {
@@ -22,7 +23,6 @@ export interface Service {
   features: string[];
 }
 
-// Added Experience interface to support ExperienceSlider component
 export interface Experience {
   id: string;
   company: string;
@@ -31,7 +31,6 @@ export interface Experience {
   period: string;
 }
 
-// Added FAQItem interface to support FAQ component
 export interface FAQItem {
   question: string;
   answer: string;

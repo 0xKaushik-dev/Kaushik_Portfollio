@@ -8,7 +8,8 @@ export const PROJECTS: Project[] = [
     category: 'Full Automation',
     description: 'A fully automated website built using an AI-powered workflow — from idea interpretation to live deployment.',
     imageUrl: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=1200',
-    highlights: ['AI-driven structure', 'Automated UI generation', 'Cloud deployment', 'Fast load times']
+    highlights: ['AI-driven structure', 'Automated UI generation', 'Cloud deployment', 'Fast load times'],
+    liveUrl: 'https://ai-portfolio-demo.vercel.app'
   }
 ];
 
@@ -72,7 +73,6 @@ export const SERVICES: Service[] = [
   }
 ];
 
-// Added EXPERIENCES to resolve error in ExperienceSlider.tsx
 export const EXPERIENCES: Experience[] = [
   {
     id: '1',
@@ -90,7 +90,6 @@ export const EXPERIENCES: Experience[] = [
   }
 ];
 
-// Added FAQS to resolve error in FAQ.tsx
 export const FAQS: FAQItem[] = [
   {
     question: 'How long does a website take to build?',

@@ -20,22 +20,29 @@ const Work: React.FC = () => {
             className="group cursor-pointer space-y-8"
             whileHover="hover"
           >
-            <div className="overflow-hidden rounded-[48px] bg-gray-100 dark:bg-gray-900 relative aspect-video shadow-2xl transition-colors">
-              <motion.img 
-                variants={{
-                  hover: { scale: 1.05 }
-                }}
-                transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-                src={project.imageUrl} 
-                alt={project.title}
-                className="w-full h-full object-cover grayscale brightness-95 group-hover:grayscale-0 group-hover:brightness-100 transition-all duration-700"
-              />
-              <div className="absolute top-8 left-8">
-                <span className="bg-white/90 dark:bg-black/80 backdrop-blur-md px-6 py-2 rounded-full text-[10px] font-black uppercase tracking-widest shadow-sm dark:text-white transition-colors">
-                  {project.category}
-                </span>
+            <a 
+              href={project.liveUrl} 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="block outline-none"
+            >
+              <div className="overflow-hidden rounded-[48px] bg-gray-100 dark:bg-gray-900 relative aspect-video shadow-2xl transition-colors">
+                <motion.img 
+                  variants={{
+                    hover: { scale: 1.05 }
+                  }}
+                  transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+                  src={project.imageUrl} 
+                  alt={project.title}
+                  className="w-full h-full object-cover grayscale brightness-95 group-hover:grayscale-0 group-hover:brightness-100 transition-all duration-700"
+                />
+                <div className="absolute top-8 left-8">
+                  <span className="bg-white/90 dark:bg-black/80 backdrop-blur-md px-6 py-2 rounded-full text-[10px] font-black uppercase tracking-widest shadow-sm dark:text-white transition-colors">
+                    {project.category}
+                  </span>
+                </div>
               </div>
-            </div>
+            </a>
             
             <div className="grid md:grid-cols-2 gap-12 px-4">
               <div className="space-y-4">
@@ -50,18 +57,21 @@ const Work: React.FC = () => {
                     </span>
                   ))}
                 </div>
-                <motion.div 
+                <motion.a 
+                  href={project.liveUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   variants={{
                     hover: { x: 10 }
                   }}
-                  className="flex items-center space-x-2 text-[10px] font-black uppercase tracking-widest pt-8 text-black dark:text-white transition-colors"
+                  className="flex items-center space-x-2 text-[10px] font-black uppercase tracking-widest pt-8 text-black dark:text-white transition-colors hover:opacity-70"
                 >
                   <span>Launch Live</span>
                   <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3">
                     <line x1="7" y1="17" x2="17" y2="7"></line>
                     <polyline points="7 7 17 7 17 17"></polyline>
                   </svg>
-                </motion.div>
+                </motion.a>
               </div>
             </div>
           </motion.div>
